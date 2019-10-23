@@ -33,7 +33,7 @@ public class Cast implements FilmInformation{
         outElement.forEach(element ->
                 element.getElementsByAttributeValueMatching("class", "odd|even").
                         forEach(innerElement -> {
-                            String[] splitedElement = innerElement.text().split(" ... ");
+                            String[] splitedElement = innerElement.text().split("(\\s\\.\\.\\.\\s)");
                             actors.add(splitedElement[0]);
                             if(splitedElement.length > 1)
                                 characters.add(splitedElement[1]);
